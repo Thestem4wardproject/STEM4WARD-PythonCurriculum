@@ -1,6 +1,6 @@
 input: .
 output: .retype
-url: # Add your website address here
+url: https://thestem4wardproject.github.io/STEM4WARD-PythonCurriculum/
 branding:
   title: STEM4WARD
   label: Docs
