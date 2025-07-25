@@ -9,24 +9,24 @@
     <meta name="generator" content="Retype 3.11.0">
 
     <!-- Primary Meta Tags -->
-    <title>Week 3: Making Decisions and Building Functions &#127919;</title>
-    <meta name="title" content="Week 3: Making Decisions and Building Functions 🎯">
-    <meta name="description" content="This week is where programming gets really exciting! You're going to teach your programs how to make decisions and create your own custom commands.">
+    <title>Week 4: Drawing with Code and Loops &#128034;&#127912;</title>
+    <meta name="title" content="Week 4: Drawing with Code and Loops 🐢🎨">
+    <meta name="description" content="Get ready for the coolest week yet! Today you're going to learn how to draw pictures using code.">
 
     <!-- Canonical -->
-    <link rel="canonical" href="/lessons/week3/">
+    <link rel="canonical" href="/lessons/week4/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="/lessons/week3/">
-    <meta property="og:title" content="Week 3: Making Decisions and Building Functions 🎯">
-    <meta property="og:description" content="This week is where programming gets really exciting! You're going to teach your programs how to make decisions and create your own custom commands.">
+    <meta property="og:url" content="/lessons/week4/">
+    <meta property="og:title" content="Week 4: Drawing with Code and Loops 🐢🎨">
+    <meta property="og:description" content="Get ready for the coolest week yet! Today you're going to learn how to draw pictures using code.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="/lessons/week3/">
-    <meta property="twitter:title" content="Week 3: Making Decisions and Building Functions 🎯">
-    <meta property="twitter:description" content="This week is where programming gets really exciting! You're going to teach your programs how to make decisions and create your own custom commands.">
+    <meta property="twitter:url" content="/lessons/week4/">
+    <meta property="twitter:title" content="Week 4: Drawing with Code and Loops 🐢🎨">
+    <meta property="twitter:description" content="Get ready for the coolest week yet! Today you're going to learn how to draw pictures using code.">
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
@@ -150,278 +150,452 @@
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="retype-sidebar-right-toggle"></div>
                                 <!-- Page content  -->
-<doc-anchor-target id="week-3-making-decisions-and-building-functions-" class="break-words">
+<doc-anchor-target id="week-4-drawing-with-code-and-loops-" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#week-3-making-decisions-and-building-functions-">#</doc-anchor-trigger>
-        <span>Week 3: Making Decisions and Building Functions <span class="docs-emoji">&#x1F3AF;</span></span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#week-4-drawing-with-code-and-loops-">#</doc-anchor-trigger>
+        <span>Week 4: Drawing with Code and Loops <span class="docs-emoji">&#x1F422;</span><span class="docs-emoji">&#x1F3A8;</span></span>
     </h1>
 </doc-anchor-target>
-<p>This week is where programming gets really exciting! You&#x27;re going to teach your programs how to make decisions and create your own custom commands.</p>
-<doc-anchor-target id="teaching-python-to-make-decisions">
+<p>Get ready for the coolest week yet! Today you&#x27;re going to learn how to draw pictures using code. We&#x27;ll use Python&#x27;s turtle graphics - imagine a little turtle with a pen that follows your commands.</p>
+<doc-anchor-target id="meet-your-turtle">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#teaching-python-to-make-decisions">#</doc-anchor-trigger>
-        <span>Teaching Python to Make Decisions</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#meet-your-turtle">#</doc-anchor-trigger>
+        <span>Meet Your Turtle</span>
     </h2>
 </doc-anchor-target>
-<p>Right now, your programs do the same thing every time. But what if you want Python to do different things based on what the user says? That&#x27;s where <code v-pre>if</code> statements come in!</p>
-<doc-anchor-target id="your-first-if-statement">
+<p>The turtle module lets you control a virtual turtle that draws on the screen. It&#x27;s like having a remote-controlled pen!</p>
+<p>First, let&#x27;s set up our turtle:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">import turtle
+
+# Create a turtle and a screen
+my_turtle = turtle.Turtle()
+screen = turtle.Screen()
+
+# Keep the window open
+screen.exitonclick()</code></pre>
+</doc-codeblock></div>
+<p><strong>In Replit:</strong> The turtle graphics will show up in a separate window next to your code.</p>
+<doc-anchor-target id="basic-turtle-commands">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#basic-turtle-commands">#</doc-anchor-trigger>
+        <span>Basic Turtle Commands</span>
+    </h2>
+</doc-anchor-target>
+<p>Your turtle knows these commands:</p>
+<doc-anchor-target id="moving-around">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#your-first-if-statement">#</doc-anchor-trigger>
-        <span>Your First If Statement</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#moving-around">#</doc-anchor-trigger>
+        <span>Moving Around</span>
     </h3>
 </doc-anchor-target>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-python"><code v-pre class="language-python">age = int(input(&quot;How old are you? &quot;))
-
-if age &gt;= 13:
-    print(&quot;You're a teenager!&quot;)</code></pre>
+<pre translate="no" class="language-python"><code v-pre class="language-python">my_turtle.forward(100)    # Move forward 100 pixels
+my_turtle.backward(50)    # Move backward 50 pixels
+my_turtle.left(90)        # Turn left 90 degrees
+my_turtle.right(45)       # Turn right 45 degrees</code></pre>
 </doc-codeblock></div>
-<p>The <code v-pre>if</code> statement checks if something is true. If it is, Python runs the code underneath (notice how it&#x27;s indented!). If not, Python skips it.</p>
-<doc-anchor-target id="comparison-operators-how-python-compares-things">
+<doc-anchor-target id="pen-control">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#comparison-operators-how-python-compares-things">#</doc-anchor-trigger>
-        <span>Comparison Operators (How Python Compares Things)</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#pen-control">#</doc-anchor-trigger>
+        <span>Pen Control</span>
     </h3>
 </doc-anchor-target>
-<p>Python uses special symbols to compare values:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">my_turtle.penup()         # Lift the pen (move without drawing)
+my_turtle.pendown()       # Put the pen down (draw while moving)
+my_turtle.pencolor(&quot;red&quot;) # Change pen color</code></pre>
+</doc-codeblock></div>
+<p><strong>Try this:</strong> Draw a simple line:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">import turtle
+
+my_turtle = turtle.Turtle()
+my_turtle.forward(100)
+my_turtle.left(90)
+my_turtle.forward(100)
+
+turtle.done()</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="drawing-your-first-shapes">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#drawing-your-first-shapes">#</doc-anchor-trigger>
+        <span>Drawing Your First Shapes</span>
+    </h2>
+</doc-anchor-target>
+<p>Let&#x27;s draw a square:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">import turtle
+
+my_turtle = turtle.Turtle()
+
+# Draw a square
+my_turtle.forward(100)
+my_turtle.left(90)
+my_turtle.forward(100)
+my_turtle.left(90)
+my_turtle.forward(100)
+my_turtle.left(90)
+my_turtle.forward(100)
+my_turtle.left(90)
+
+turtle.done()</code></pre>
+</doc-codeblock></div>
+<p>That works, but it&#x27;s a lot of repeated code. There&#x27;s got to be a better way...</p>
+<doc-anchor-target id="introducing-for-loops">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#introducing-for-loops">#</doc-anchor-trigger>
+        <span>Introducing For Loops</span>
+    </h2>
+</doc-anchor-target>
+<p>A <code v-pre>for</code> loop lets you repeat code without writing it over and over:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">import turtle
+
+my_turtle = turtle.Turtle()
+
+# Draw a square using a loop
+for i in range(4):
+    my_turtle.forward(100)
+    my_turtle.left(90)
+
+turtle.done()</code></pre>
+</doc-codeblock></div>
+<p><strong>How it works:</strong></p>
 <ul>
-<li><code v-pre>==</code> means &quot;exactly equal to&quot; (not just one <code v-pre>=</code>!)</li>
-<li><code v-pre>!=</code> means &quot;not equal to&quot;</li>
-<li><code v-pre>&gt;</code> means &quot;greater than&quot;</li>
-<li><code v-pre>&lt;</code> means &quot;less than&quot;</li>
-<li><code v-pre>&gt;=</code> means &quot;greater than or equal to&quot;</li>
-<li><code v-pre>&lt;=</code> means &quot;less than or equal to&quot;</li>
+<li><code v-pre>range(4)</code> means &quot;do this 4 times&quot;</li>
+<li>Each time through the loop, the indented code runs</li>
+<li><code v-pre>i</code> is a counter that goes 0, 1, 2, 3 (but we don&#x27;t use it here)</li>
 </ul>
-<p><strong>Try this:</strong></p>
+<p><strong>Try these shapes:</strong></p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-python"><code v-pre class="language-python">favorite_number = int(input(&quot;What's your favorite number? &quot;))
+<pre translate="no" class="language-python"><code v-pre class="language-python"># Triangle (3 sides, turn 120 degrees each time)
+for i in range(3):
+    my_turtle.forward(100)
+    my_turtle.left(120)
 
-if favorite_number == 7:
-    print(&quot;Seven is my favorite too!&quot;)</code></pre>
+# Pentagon (5 sides, turn 72 degrees each time)
+for i in range(5):
+    my_turtle.forward(100)
+    my_turtle.left(72)</code></pre>
 </doc-codeblock></div>
-<doc-anchor-target id="adding-more-choices-with-elif-and-else">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#adding-more-choices-with-elif-and-else">#</doc-anchor-trigger>
-        <span>Adding More Choices with elif and else</span>
-    </h3>
+<p><strong>Pro tip:</strong> For any shape with n sides, turn 360/n degrees each time!</p>
+<doc-anchor-target id="making-shape-functions">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#making-shape-functions">#</doc-anchor-trigger>
+        <span>Making Shape Functions</span>
+    </h2>
 </doc-anchor-target>
-<p>What if you want multiple options? Use <code v-pre>elif</code> (which means &quot;else if&quot;) and <code v-pre>else</code>:</p>
+<p>Let&#x27;s turn our shapes into reusable functions:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-python"><code v-pre class="language-python">weather = input(&quot;What's the weather like? &quot;)
+<pre translate="no" class="language-python"><code v-pre class="language-python">import turtle
 
-if weather == &quot;sunny&quot;:
-    print(&quot;Perfect day for the park!&quot;)
-elif weather == &quot;rainy&quot;:
-    print(&quot;Good day to stay inside and code!&quot;)
-else:
-    print(&quot;Sounds like an interesting day!&quot;)</code></pre>
+my_turtle = turtle.Turtle()
+
+def draw_square(size):
+    for i in range(4):
+        my_turtle.forward(size)
+        my_turtle.left(90)
+
+def draw_triangle(size):
+    for i in range(3):
+        my_turtle.forward(size)
+        my_turtle.left(120)
+
+# Now you can draw multiple shapes easily!
+draw_square(100)
+my_turtle.penup()
+my_turtle.forward(150)
+my_turtle.pendown()
+draw_triangle(80)
+
+turtle.done()</code></pre>
 </doc-codeblock></div>
-<p><strong>The Rules:</strong></p>
+<doc-anchor-target id="while-loops-keep-going-until">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#while-loops-keep-going-until">#</doc-anchor-trigger>
+        <span>While Loops: Keep Going Until...</span>
+    </h2>
+</doc-anchor-target>
+<p><code v-pre>for</code> loops run a specific number of times. <code v-pre>while</code> loops keep going until something changes:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">import turtle
+
+my_turtle = turtle.Turtle()
+my_turtle.speed(10)  # Make it faster
+
+size = 5
+while size &lt; 100:
+    my_turtle.forward(size)
+    my_turtle.left(91)  # Slightly more than 90 for a spiral effect
+    size = size + 2
+
+turtle.done()</code></pre>
+</doc-codeblock></div>
+<p>This creates a cool spiral because:</p>
 <ul>
-<li>You can have as many <code v-pre>elif</code> statements as you want</li>
-<li><code v-pre>else</code> is optional and always comes last</li>
-<li>Python checks them in order and stops at the first true one</li>
+<li>We start with a small line (size = 5)</li>
+<li>Each time through the loop, we make the line a bit longer</li>
+<li>We keep going until the line would be 100 or bigger</li>
 </ul>
-<doc-anchor-target id="combining-conditions">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#combining-conditions">#</doc-anchor-trigger>
-        <span>Combining Conditions</span>
-    </h3>
-</doc-anchor-target>
-<p>You can check multiple things at once using <code v-pre>and</code> and <code v-pre>or</code>:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-python"><code v-pre class="language-python">age = int(input(&quot;How old are you? &quot;))
-grade = input(&quot;What grade are you in? &quot;)
-
-if age &gt;= 13 and grade == &quot;8th&quot;:
-    print(&quot;You're probably in middle school!&quot;)
-
-if age &lt; 10 or age &gt; 18:
-    print(&quot;You're either really young or getting old!&quot;)</code></pre>
-</doc-codeblock></div>
-<doc-anchor-target id="practice-choose-your-own-adventure">
+<doc-anchor-target id="cool-patterns-with-loops">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#practice-choose-your-own-adventure">#</doc-anchor-trigger>
-        <span>Practice: Choose Your Own Adventure</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#cool-patterns-with-loops">#</doc-anchor-trigger>
+        <span>Cool Patterns with Loops</span>
     </h2>
 </doc-anchor-target>
-<p>Let&#x27;s build a mini adventure game:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-python"><code v-pre class="language-python">print(&quot;You're walking through a forest and see two paths.&quot;)
-choice = input(&quot;Do you go left or right? &quot;)
-
-if choice == &quot;left&quot;:
-    print(&quot;You find a friendly dragon who gives you gold!&quot;)
-elif choice == &quot;right&quot;:
-    print(&quot;You discover a hidden cave full of crystals!&quot;)
-else:
-    print(&quot;You stand there confused and a squirrel laughs at you.&quot;)</code></pre>
-</doc-codeblock></div>
-<p><strong>Your challenge:</strong> Expand this story! Add more choices, more <code v-pre>if</code> statements, and make it longer.</p>
-<doc-anchor-target id="functions-creating-your-own-commands">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#functions-creating-your-own-commands">#</doc-anchor-trigger>
-        <span>Functions: Creating Your Own Commands</span>
-    </h2>
-</doc-anchor-target>
-<p>You know how <code v-pre>print()</code> and <code v-pre>input()</code> are commands that do specific things? You can create your own commands called functions!</p>
-<doc-anchor-target id="your-first-function">
+<doc-anchor-target id="star-pattern">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#your-first-function">#</doc-anchor-trigger>
-        <span>Your First Function</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#star-pattern">#</doc-anchor-trigger>
+        <span>Star Pattern</span>
     </h3>
 </doc-anchor-target>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-python"><code v-pre class="language-python">def say_hello():
-    print(&quot;Hello there!&quot;)
-    print(&quot;Welcome to my program!&quot;)
+<pre translate="no" class="language-python"><code v-pre class="language-python">import turtle
 
-# To use your function, you &quot;call&quot; it:
-say_hello()</code></pre>
+my_turtle = turtle.Turtle()
+my_turtle.speed(10)
+my_turtle.pencolor(&quot;gold&quot;)
+
+for i in range(5):
+    my_turtle.forward(100)
+    my_turtle.right(144)  # The magic angle for a 5-pointed star!
+
+turtle.done()</code></pre>
 </doc-codeblock></div>
-<p>The <code v-pre>def</code> keyword tells Python &quot;I&#x27;m creating a new function.&quot; Everything indented underneath is part of that function.</p>
-<doc-anchor-target id="functions-with-parameters-giving-functions-information">
+<doc-anchor-target id="colorful-spiral">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#functions-with-parameters-giving-functions-information">#</doc-anchor-trigger>
-        <span>Functions with Parameters (Giving Functions Information)</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#colorful-spiral">#</doc-anchor-trigger>
+        <span>Colorful Spiral</span>
     </h3>
 </doc-anchor-target>
-<p>Functions become way more useful when you can give them information:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-python"><code v-pre class="language-python">def greet_person(name):
-    print(&quot;Hello &quot; + name + &quot;!&quot;)
-    print(&quot;Hope you're having a great day!&quot;)
+<pre translate="no" class="language-python"><code v-pre class="language-python">import turtle
 
-# Now you can use it with different names:
-greet_person(&quot;Alex&quot;)
-greet_person(&quot;Sam&quot;)</code></pre>
-</doc-codeblock></div>
-<p>You can give functions multiple pieces of information:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-python"><code v-pre class="language-python">def introduce_person(name, age, hobby):
-    print(&quot;This is &quot; + name)
-    print(&quot;They are &quot; + str(age) + &quot; years old&quot;)
-    print(&quot;They love &quot; + hobby)
+my_turtle = turtle.Turtle()
+my_turtle.speed(10)
+colors = [&quot;red&quot;, &quot;blue&quot;, &quot;green&quot;, &quot;purple&quot;, &quot;orange&quot;]
 
-introduce_person(&quot;Maya&quot;, 13, &quot;skateboarding&quot;)</code></pre>
+for i in range(100):
+    my_turtle.pencolor(colors[i % 5])  # Cycle through colors
+    my_turtle.forward(i * 2)
+    my_turtle.left(91)
+
+turtle.done()</code></pre>
 </doc-codeblock></div>
-<doc-anchor-target id="functions-that-give-back-answers-return-values">
+<doc-anchor-target id="flower-pattern">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#functions-that-give-back-answers-return-values">#</doc-anchor-trigger>
-        <span>Functions That Give Back Answers (Return Values)</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#flower-pattern">#</doc-anchor-trigger>
+        <span>Flower Pattern</span>
     </h3>
 </doc-anchor-target>
-<p>Sometimes you want a function to calculate something and give you back the answer:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-python"><code v-pre class="language-python">def add_numbers(num1, num2):
-    result = num1 + num2
-    return result
+<pre translate="no" class="language-python"><code v-pre class="language-python">import turtle
 
-# Now you can use the answer:
-answer = add_numbers(5, 3)
-print(&quot;The sum is &quot; + str(answer))
+my_turtle = turtle.Turtle()
+my_turtle.speed(10)
 
-# Or use it directly:
-print(&quot;10 + 7 = &quot; + str(add_numbers(10, 7)))</code></pre>
+def draw_petal():
+    for i in range(2):
+        my_turtle.circle(50, 90)
+        my_turtle.left(90)
+
+# Draw 8 petals
+for i in range(8):
+    draw_petal()
+    my_turtle.left(45)
+
+turtle.done()</code></pre>
 </doc-codeblock></div>
-<doc-anchor-target id="combining-functions-and-if-statements">
+<doc-anchor-target id="loop-control-break-and-continue">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#loop-control-break-and-continue">#</doc-anchor-trigger>
+        <span>Loop Control: Break and Continue</span>
+    </h2>
+</doc-anchor-target>
+<p>Sometimes you want to exit a loop early or skip parts:</p>
+<doc-anchor-target id="break-exit-the-loop">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#combining-functions-and-if-statements">#</doc-anchor-trigger>
-        <span>Combining Functions and If Statements</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#break-exit-the-loop">#</doc-anchor-trigger>
+        <span>Break (Exit the Loop)</span>
     </h3>
 </doc-anchor-target>
-<p>Here&#x27;s where it gets really cool - you can put if statements inside functions:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-python"><code v-pre class="language-python">def check_password(password):
-    if password == &quot;python123&quot;:
-        return &quot;Access granted!&quot;
-    else:
-        return &quot;Access denied!&quot;
+<pre translate="no" class="language-python"><code v-pre class="language-python">import turtle
 
-user_password = input(&quot;Enter password: &quot;)
-result = check_password(user_password)
-print(result)</code></pre>
+my_turtle = turtle.Turtle()
+
+for i in range(1000):  # This could go forever...
+    my_turtle.forward(10)
+    my_turtle.left(10)
+    if i &gt; 100:  # But we'll stop after 100 steps
+        break
+
+turtle.done()</code></pre>
 </doc-codeblock></div>
-<doc-anchor-target id="scope-where-variables-live">
+<doc-anchor-target id="continue-skip-to-next-loop">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#continue-skip-to-next-loop">#</doc-anchor-trigger>
+        <span>Continue (Skip to Next Loop)</span>
+    </h3>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">import turtle
+
+my_turtle = turtle.Turtle()
+
+for i in range(10):
+    if i == 5:  # Skip drawing when i equals 5
+        continue
+    my_turtle.forward(20)
+    my_turtle.left(36)
+
+turtle.done()</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="challenge-projects">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#scope-where-variables-live">#</doc-anchor-trigger>
-        <span>Scope: Where Variables Live</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#challenge-projects">#</doc-anchor-trigger>
+        <span>Challenge Projects</span>
     </h2>
 </doc-anchor-target>
-<p>Here&#x27;s something important: variables inside functions stay inside functions (unless you return them):</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-python"><code v-pre class="language-python">def my_function():
-    secret = &quot;This is hidden!&quot;
-    print(secret)
-
-my_function()  # This works
-print(secret)  # This will cause an error!</code></pre>
-</doc-codeblock></div>
-<p>Think of functions like separate rooms - what happens in the function room stays in the function room.</p>
-<doc-anchor-target id="practice-project-personal-assistant">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#practice-project-personal-assistant">#</doc-anchor-trigger>
-        <span>Practice Project: Personal Assistant</span>
-    </h2>
+<doc-anchor-target id="project-1-house-drawing-function">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#project-1-house-drawing-function">#</doc-anchor-trigger>
+        <span>Project 1: House Drawing Function</span>
+    </h3>
 </doc-anchor-target>
-<p>Create a program with these functions:</p>
-<ol>
-<li><strong>A greeting function</strong> that asks for the user&#x27;s name and welcomes them</li>
-<li><strong>A calculator function</strong> that takes two numbers and an operation (+, -, *, /)</li>
-<li><strong>A decision helper</strong> that helps them choose what to do based on the weather</li>
-</ol>
-<p><strong>Example structure:</strong></p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-python"><code v-pre class="language-python">def greet_user():
-    name = input(&quot;What's your name? &quot;)
-    print(&quot;Hello &quot; + name + &quot;! I'm your personal assistant.&quot;)
-    return name
-
-def simple_calculator():
-    # Your calculator code here
-    pass
-
-def weather_advisor():
-    # Your weather advice code here
-    pass
-
-# Main program:
-user_name = greet_user()
-# Add calls to your other functions here</code></pre>
-</doc-codeblock></div>
-<doc-anchor-target id="why-functions-are-amazing">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#why-functions-are-amazing">#</doc-anchor-trigger>
-        <span>Why Functions Are Amazing</span>
-    </h2>
-</doc-anchor-target>
-<p>Functions help you:</p>
+<p>Create a function that draws a house with:</p>
 <ul>
-<li><strong>Avoid repetition:</strong> Write code once, use it many times</li>
-<li><strong>Stay organized:</strong> Break big problems into smaller pieces</li>
-<li><strong>Fix bugs easier:</strong> If something&#x27;s wrong, you know exactly where to look</li>
-<li><strong>Work with others:</strong> Functions make it easy to share code</li>
+<li>A square base</li>
+<li>A triangular roof</li>
+<li>A door and windows</li>
+<li>Use loops where possible!</li>
 </ul>
-<doc-anchor-target id="common-mistakes-and-how-to-fix-them">
+<doc-anchor-target id="project-2-geometric-art">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#project-2-geometric-art">#</doc-anchor-trigger>
+        <span>Project 2: Geometric Art</span>
+    </h3>
+</doc-anchor-target>
+<p>Create a program that:</p>
+<ul>
+<li>Draws multiple shapes in different colors</li>
+<li>Uses both for and while loops</li>
+<li>Creates an interesting pattern</li>
+</ul>
+<doc-anchor-target id="project-3-interactive-drawing">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#project-3-interactive-drawing">#</doc-anchor-trigger>
+        <span>Project 3: Interactive Drawing</span>
+    </h3>
+</doc-anchor-target>
+<p>Create a program that:</p>
+<ul>
+<li>Asks the user what shape they want</li>
+<li>Asks for the size and color</li>
+<li>Uses if statements and functions to draw their choice</li>
+</ul>
+<p><strong>Starter code:</strong></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">import turtle
+
+my_turtle = turtle.Turtle()
+
+def draw_polygon(sides, size):
+    angle = 360 / sides
+    for i in range(sides):
+        my_turtle.forward(size)
+        my_turtle.left(angle)
+
+# Get user input
+shape = input(&quot;What shape? (triangle, square, pentagon): &quot;)
+size = int(input(&quot;What size? &quot;))
+color = input(&quot;What color? &quot;)
+
+my_turtle.pencolor(color)
+
+if shape == &quot;triangle&quot;:
+    draw_polygon(3, size)
+elif shape == &quot;square&quot;:
+    draw_polygon(4, size)
+elif shape == &quot;pentagon&quot;:
+    draw_polygon(5, size)
+
+turtle.done()</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="cool-turtle-tricks">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#common-mistakes-and-how-to-fix-them">#</doc-anchor-trigger>
-        <span>Common Mistakes (And How to Fix Them)</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#cool-turtle-tricks">#</doc-anchor-trigger>
+        <span>Cool Turtle Tricks</span>
     </h2>
 </doc-anchor-target>
-<p><strong>&quot;My if statement never works!&quot;</strong></p>
+<doc-anchor-target id="speed-control">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#speed-control">#</doc-anchor-trigger>
+        <span>Speed Control</span>
+    </h3>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">my_turtle.speed(1)   # Slowest
+my_turtle.speed(10)  # Fastest
+my_turtle.speed(0)   # Instant (no animation)</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="filling-shapes">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#filling-shapes">#</doc-anchor-trigger>
+        <span>Filling Shapes</span>
+    </h3>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">my_turtle.fillcolor(&quot;lightblue&quot;)
+my_turtle.begin_fill()
+# Draw your shape here
+my_turtle.end_fill()</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="moving-without-drawing">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#moving-without-drawing">#</doc-anchor-trigger>
+        <span>Moving Without Drawing</span>
+    </h3>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-python"><code v-pre class="language-python">my_turtle.penup()
+my_turtle.goto(100, 100)  # Move to specific coordinates
+my_turtle.pendown()</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="why-loops-are-game-changers">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#why-loops-are-game-changers">#</doc-anchor-trigger>
+        <span>Why Loops Are Game Changers</span>
+    </h2>
+</doc-anchor-target>
+<p>Loops let you:</p>
 <ul>
-<li>Remember: use <code v-pre>==</code> to compare, not <code v-pre>=</code></li>
-<li>Check your spelling exactly: <code v-pre>&quot;yes&quot;</code> is different from <code v-pre>&quot;Yes&quot;</code></li>
+<li><strong>Write less code:</strong> 4 lines instead of 16 for a square</li>
+<li><strong>Create complex patterns:</strong> Spirals, flowers, fractals</li>
+<li><strong>Handle repetitive tasks:</strong> Drawing 100 shapes without going crazy</li>
+<li><strong>Make interactive programs:</strong> Keep asking for input until they&#x27;re done</li>
 </ul>
-<p><strong>&quot;My function doesn&#x27;t do anything&quot;</strong></p>
+<doc-anchor-target id="common-mistakes-dont-worry-we-all-make-these">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#common-mistakes-dont-worry-we-all-make-these">#</doc-anchor-trigger>
+        <span>Common Mistakes (Don&#x27;t Worry, We All Make These!)</span>
+    </h2>
+</doc-anchor-target>
+<p><strong>&quot;My turtle draws weird shapes&quot;</strong></p>
 <ul>
-<li>Make sure you&#x27;re calling it: <code v-pre>my_function()</code> not just <code v-pre>my_function</code></li>
-<li>Check your indentation - everything in the function should be indented</li>
+<li>Check your angles - remember 360/sides for regular polygons</li>
+<li>Make sure you&#x27;re turning the right direction (left vs right)</li>
 </ul>
-<p><strong>&quot;I get an error about variables&quot;</strong></p>
+<p><strong>&quot;My loop never stops&quot;</strong></p>
 <ul>
-<li>Variables created inside functions can&#x27;t be used outside them</li>
-<li>Use <code v-pre>return</code> to get values out of functions</li>
+<li>In while loops, make sure the condition eventually becomes false</li>
+<li>Check that you&#x27;re updating your counter variable</li>
+</ul>
+<p><strong>&quot;I can&#x27;t see my drawing&quot;</strong></p>
+<ul>
+<li>Make sure you have <code v-pre>turtle.done()</code> or <code v-pre>screen.exitonclick()</code> at the end</li>
+<li>Try making your turtle faster with <code v-pre>my_turtle.speed(10)</code></li>
 </ul>
 <doc-anchor-target id="next-week-preview">
     <h2>
@@ -429,7 +603,7 @@ user_name = greet_user()
         <span>Next Week Preview</span>
     </h2>
 </doc-anchor-target>
-<p>Next week we&#x27;ll learn about loops - how to make Python do things over and over again without writing the same code 100 times. Get ready to build some seriously cool programs!</p>
+<p>Next week we&#x27;ll learn about lists - a way to store multiple pieces of information together. Imagine having a list of colors, names, or high scores that your program can remember and work with!</p>
 <doc-anchor-target id="quick-reference">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#quick-reference">#</doc-anchor-trigger>
@@ -437,21 +611,30 @@ user_name = greet_user()
     </h2>
 </doc-anchor-target>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-python"><code v-pre class="language-python"># If statements
-if condition:
-    # do this
-elif other_condition:
-    # do this instead
-else:
-    # do this if nothing else was true
+<pre translate="no" class="language-python"><code v-pre class="language-python">import turtle
 
-# Functions
-def my_function(parameter):
-    # do something
-    return result
+# Setup
+my_turtle = turtle.Turtle()
 
-# Calling functions
-answer = my_function(&quot;some value&quot;)</code></pre>
+# Movement
+my_turtle.forward(distance)
+my_turtle.left(angle)
+my_turtle.right(angle)
+
+# Pen control
+my_turtle.penup()
+my_turtle.pendown()
+my_turtle.pencolor(&quot;red&quot;)
+
+# Loops
+for i in range(n):
+    # repeat n times
+
+while condition:
+    # keep going until condition is false
+
+# End program
+turtle.done()</code></pre>
 </doc-codeblock></div>
 
                                 
@@ -462,23 +645,16 @@ answer = my_function(&quot;some value&quot;)</code></pre>
                             
                                 <nav id="retype-nextprev" class="print:hidden flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../lessons/week2/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../lessons/week3/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-base-text-muted">Previous</span>
-                                                <span class="block mt-1">Week 2: Making Your Programs Interactive 💬</span>
+                                                <span class="block mt-1">Week 3: Making Decisions and Building Functions 🎯</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../lessons/week4/">
-                                            <span>
-                                                <span class="block text-xs font-normal text-right text-base-text-muted">Next</span>
-                                                <span class="block mt-1">Week 4: Drawing with Code and Loops 🐢🎨</span>
-                                            </span>
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
-                                        </a>
                                     </div>
                                 </nav>
                             </footer>
@@ -519,6 +695,6 @@ answer = my_function(&quot;some value&quot;)</code></pre>
 
     <div id="retype-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Week 3: Making Decisions and Building Functions 🎯", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Week 4: Drawing with Code and Loops 🐢🎨", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>
