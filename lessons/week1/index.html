@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.806727154730">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.806727409276">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.11.0">
 
     <!-- Primary Meta Tags -->
-    <title>Week 1: Introduction to Python and Basic Syntax</title>
-    <meta name="title" content="Week 1: Introduction to Python and Basic Syntax">
-    <meta name="description" content="Python is a high-level programming language used to write instructions that a computer can understand. It is widely used because it is:">
+    <title>Week1</title>
+    <meta name="title" content="Week1">
 
     <!-- Canonical -->
     <link rel="canonical" href="/lessons/week1/">
@@ -19,23 +18,20 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="/lessons/week1/">
-    <meta property="og:title" content="Week 1: Introduction to Python and Basic Syntax">
-    <meta property="og:description" content="Python is a high-level programming language used to write instructions that a computer can understand. It is widely used because it is:">
+    <meta property="og:title" content="Week1">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="/lessons/week1/">
-    <meta property="twitter:title" content="Week 1: Introduction to Python and Basic Syntax">
-    <meta property="twitter:description" content="Python is a high-level programming language used to write instructions that a computer can understand. It is widely used because it is:">
+    <meta property="twitter:title" content="Week1">
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../resources/css/retype.css?v=3.11.0.806727154730" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.11.0.806727409276" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.11.0.806727154730" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.11.0.806727409276" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.11.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0.806727154730" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.11.0.806727154730" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0.806727409276" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -150,172 +146,12 @@
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="retype-sidebar-right-toggle"></div>
                                 <!-- Page content  -->
-<doc-anchor-target id="week-1-introduction-to-python-and-basic-syntax" class="break-words">
+<doc-anchor-target id="week1" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#week-1-introduction-to-python-and-basic-syntax">#</doc-anchor-trigger>
-        <span>Week 1: Introduction to Python and Basic Syntax</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#week1">#</doc-anchor-trigger>
+        <span>Week1</span>
     </h1>
 </doc-anchor-target>
-<doc-anchor-target id="what-is-python">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#what-is-python">#</doc-anchor-trigger>
-        <span>What is Python?</span>
-    </h2>
-</doc-anchor-target>
-<p>Python is a high-level programming language used to write instructions that a computer can understand. It is widely used because it is:</p>
-<ul>
-<li>Easy to read and write</li>
-<li>Beginner-friendly</li>
-<li>Used in many areas such as web development, automation, AI, and data science</li>
-</ul>
-<p>In this course, we will use Python to learn how to think like a programmer and solve problems with code.</p>
-<hr>
-<doc-anchor-target id="using-replit-to-write-python">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#using-replit-to-write-python">#</doc-anchor-trigger>
-        <span>Using Replit to Write Python</span>
-    </h2>
-</doc-anchor-target>
-<p>In this tutorial, we will use <a href="https://replit.com">Replit</a>, an online tool that lets you write and run Python code in your browser.</p>
-<doc-anchor-target id="how-to-start-a-python-repl">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#how-to-start-a-python-repl">#</doc-anchor-trigger>
-        <span>How to Start a Python Repl</span>
-    </h3>
-</doc-anchor-target>
-<ol>
-<li>Go to <a href="https://replit.com">https://replit.com</a></li>
-<li>Click on <strong>+ Create Repl</strong></li>
-<li>Select <strong>Python</strong></li>
-<li>Name your project (e.g., <code v-pre>week1-intro</code>)</li>
-<li>Click <strong>Create Repl</strong></li>
-</ol>
-<p>You’re now ready to begin writing Python code.</p>
-<hr>
-<doc-anchor-target id="printing-text-with-print">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#printing-text-with-print">#</doc-anchor-trigger>
-        <span>Printing Text with <code v-pre>print()</code></span>
-    </h2>
-</doc-anchor-target>
-<p>To display something on the screen, we use the <code v-pre>print()</code> function.</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-python"><code v-pre class="language-python">print(&quot;Hello, world!&quot;)</code></pre>
-</doc-codeblock></div>
-<p>When you run this code, it will show:</p>
-<p>Copy
-Edit
-Hello, world!
-You can also print numbers or math expressions:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-none"><code v-pre class="language-none">print(2 + 3)
-print(&quot;Python version&quot;, 3.11)</code></pre>
-</doc-codeblock></div>
-<p>Basic Math in Python
-Python can be used as a calculator. Try the following expressions:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-none"><code v-pre class="language-none">print(5 + 2)    # Addition
-print(8 - 3)    # Subtraction
-print(4 * 6)    # Multiplication
-print(9 / 2)    # Division (with decimals)
-print(9 // 2)   # Integer division (no decimals)
-print(10 % 3)   # Modulo (remainder)</code></pre>
-</doc-codeblock></div>
-<p>Writing Comments
-Comments are notes you write in your code to explain what it does. Python ignores them when the code runs. Comments start with a # symbol.</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-none"><code v-pre class="language-none"># This is a comment
-print(&quot;This will show up&quot;)
-# print(&quot;This line will not run&quot;)</code></pre>
-</doc-codeblock></div>
-<p>Use comments to explain what your code is doing.</p>
-<p>Understanding Syntax
-Syntax is the set of rules for how code must be written in Python.</p>
-<p>Indentation
-Python uses indentation (spaces or tabs at the beginning of lines) to group code blocks. For example:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-none"><code v-pre class="language-none">if True:
-    print(&quot;This line is indented correctly&quot;)</code></pre>
-</doc-codeblock></div>
-<p>If you don’t indent properly, Python will give you an error.</p>
-<p>Case Sensitivity
-Python treats lowercase and uppercase letters as different. These two lines are not the same:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-none"><code v-pre class="language-none">print(&quot;OK&quot;)   # This works
-Print(&quot;OK&quot;)   # This gives an error</code></pre>
-</doc-codeblock></div>
-<p>How Python Runs Code
-Python reads your code from top to bottom, one line at a time.</p>
-<p>Try:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-none"><code v-pre class="language-none">print(&quot;Line 1&quot;)
-print(&quot;Line 2&quot;)
-print(&quot;Line 3&quot;)</code></pre>
-</doc-codeblock></div>
-<p>Output:</p>
-<p>scss
-Copy
-Edit
-Line 1
-Line 2
-Line 3
-This is called sequential execution.</p>
-<p>Try It Yourself
-In your own Replit project, try writing the following programs.</p>
-<p>Print your name
-python
-Copy
-Edit
-print(&quot;My name is Alice&quot;)
-Print a fun fact
-python
-Copy
-Edit
-print(&quot;I love cats and coding!&quot;)
-Do some math
-python
-Copy
-Edit
-print(&quot;8 times 7 is&quot;, 8 * 7)
-Create an error on purpose
-python
-Copy
-Edit
-Print(&quot;This will cause an error&quot;)
-Challenges
-Try solving these simple problems using what you’ve learned.</p>
-<p>Challenge 1: Silly Joke
-python
-Copy
-Edit
-print(&quot;Why did the Python developer go broke?&quot;)
-print(&quot;Because he used up all his cache!&quot;)
-Challenge 2: Simple Calculator
-python
-Copy
-Edit
-print(&quot;2 + 2 =&quot;, 2 + 2)
-print(&quot;9 // 4 =&quot;, 9 // 4)
-print(&quot;10 % 4 =&quot;, 10 % 4)
-Challenge 3: Use Comments
-python
-Copy
-Edit</p>
-<doc-anchor-target id="this-is-a-fun-fact">
-    <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#this-is-a-fun-fact">#</doc-anchor-trigger>
-        <span>This is a fun fact</span>
-    </h1>
-</doc-anchor-target>
-<p>print(&quot;Space is completely silent.&quot;)
-Summary
-This week you learned:</p>
-<p>What Python is used for</p>
-<p>How to use Replit to run Python code</p>
-<p>How to use print() to show text and numbers</p>
-<p>How to do basic math in Python</p>
-<p>How to write comments</p>
-<p>Why indentation and correct syntax matter</p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -375,6 +211,6 @@ This week you learned:</p>
 
     <div id="retype-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Week 1: Introduction to Python and Basic Syntax", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Week1", level: 2, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>
