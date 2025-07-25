@@ -2,7 +2,7 @@ input: .
 output: .retype
 url: # Add your website address here
 branding:
-  title: 2079
+  title: STEM4WARD
   label: Docs
 footer:
   copyright: "&copy; Copyright {{ year }}. All rights reserved."
