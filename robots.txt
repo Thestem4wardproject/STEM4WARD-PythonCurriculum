@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: /sitemap.xml.gz
+Sitemap: https://thestem4wardproject.github.io/STEM4WARD-PythonCurriculum/sitemap.xml.gz
