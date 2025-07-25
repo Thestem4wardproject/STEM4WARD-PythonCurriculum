@@ -6,3 +6,11 @@ branding:
   label: Docs
 footer:
   copyright: "&copy; Copyright {{ year }}. All rights reserved."
+theme:
+  base:
+    base-color: "#8839ef"
+    base-bg: "#eff1f5"
+  dark:
+    base-color: "#ca9ee6"
+    base-bg: "#303446"
+
